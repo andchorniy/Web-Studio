@@ -1,0 +1,51 @@
+.teammate {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: $primary-white-color;
+}
+.teammate__photo {
+  display: block;
+  width: 100%;
+}
+.teammate__description {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+.teammate__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+  margin-bottom: 10px;
+}
+.teammate__career {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+.teammate__social-list {
+  justify-content: center;
+}
+.teammate__social-item:not(:last-child) {
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .teammate {
+    width: 354px;
+    margin: 15px;
+  }
+  .our-team__team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .teammate {
+    width: 270px;
+  }
+}
