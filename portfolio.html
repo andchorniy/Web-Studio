@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/portfolio.min.css">
     <title>WebStudio</title>
 </head>
@@ -14,25 +15,36 @@
     
         <div class="page-header__container container">
             <a class="logo page-header__logo" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
-            <nav class="page-header__nav">
-                <ul class="page-header__link-list list">
-                    <li class="page-header__list-item"><a class="page-header__link-item "
-                            href="./index.html">Студия</a></li>
-                    <li class="page-header__list-item"><a class="page-header__link-item current"
-                            href="./portfolio.html">Портфолио</a></li>
-                    <li class="page-header__list-item"><a class="page-header__link-item" href="">Контакты</a></li>
+            <button type="button" class="page-header__menu-button" aria-expanded="false" aria-controls="menu-container"
+                data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="page-header__icon-cross" href="./img/symbol-defs.svg#icon-close_menu"></use>
+                    <use class="page-header__icon-menu" href="./img/symbol-defs.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="page-header__menu-container" data-menu>
+                <nav class="page-header__nav">
+                    <ul class="page-header__link-list list">
+                        <li class="page-header__list-item"><a class="page-header__link-item"
+                                href="./index.html">Студия</a>
+                        </li>
+                        <li class="page-header__list-item"><a class="page-header__link-item current"
+                                href="./portfolio.html">Портфолио</a></li>
+                        <li class="page-header__list-item"><a class="page-header__link-item" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+                <ul class="page-header__contact-list list">
+                    <li class="page-header__contact-item"><a class="page-header__contact-link"
+                            href="mailto:info@devstudio.com">
+                            <svg class="page-header__icon" width="16" height="12">
+                                <use href='./img/symbol-defs.svg#icon-envelope'></use>
+                            </svg> info@devstudio.com</a></li>
+                    <li class="page-header__contact-item"><a class="page-header__contact-link" href="tel:+380961111111">
+                            <svg class="page-header__icon" width="10" height="16">
+                                <use href='./img/symbol-defs.svg#icon-smartphone'></use>
+                            </svg>+38 096 111 11 11</a></li>
                 </ul>
-            </nav>
-            <ul class="page-header__contact-list list">
-                <li class="page-header__contact-item"><a class="page-header__contact-link" href="mailto:info@devstudio.com">
-                        <svg class="page-header__icon" width="16" height="12">
-                            <use href='./img/symbol-defs.svg#icon-envelope'></use>
-                        </svg> info@devstudio.com</a></li>
-                <li class="page-header__contact-item"><a class="page-header__contact-link" href="tel:+380961111111">
-                        <svg class="page-header__icon" width="10" height="16">
-                            <use href='./img/symbol-defs.svg#icon-smartphone'></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
+            </div>
         </div>
     
     </header>
@@ -50,7 +62,23 @@
                 <li class="gallery__project project">
                     <a class="project__link" href="">
                         <div class="project__position">
-                            <img class="project__photo" src="./img/portfolio/tech.jpg" alt="Технокряк" width="370">
+                            <picture>
+                                <source srcset="./img/portfolio/tech/tech-450.webp 1x, ./img/portfolio/tech/tech-450-x2.webp 2x" media="(max-width: 767px)"
+                                    type="image/webp">
+                                <source srcset="./img/portfolio/tech/tech-450.jpg 1x, ./img/portfolio/tech/tech-450-x2.jpg 2x" media="(max-width: 767px)">
+                            
+                                <source srcset="./img/portfolio/tech/tech-354.webp 1x, ./img/portfolio/tech/tech-354-x2.webp 2x"  media="(max-width: 1199px)"
+                                    type="image/webp">
+                                <source srcset="./img/portfolio/tech/tech-354.jpg 1x, ./img/portfolio/tech/tech-354-x2.jpg 2x" media="(max-width: 1199px)">
+                            
+                                <source srcset="./img/portfolio/tech/tech-370.webp 1x, ./img/portfolio/tech/tech-370-x2.webp 2x" media="(min-width: 1200px)"
+                                    type="image/webp">
+                                <source srcset="./img/portfolio/tech/tech-370.jpg 1x, ./img/portfolio/tech/tech-370-x2.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <img class="project__photo" src="./img/portfolio/tech/tech-370.jpg" alt="Технокряк" width="370">
+                            </picture>
+                            
                             <div class="project__overlay">Технокряк это современная площадка распространения коронавируса. Компании используют
                                 эту платформу для цифрового
                                 шпионажа и атак на защищённые сервера конкурентов.</div>
@@ -65,7 +93,24 @@
                 <li class="gallery__project project">
                     <a class="project__link" href="">
                         <div class="project__position">
-                            <img class="project__photo" src="./img/portfolio/poster.jpg" alt="Постер New Orlean vs Golden Star" width="370">
+                            <picture>
+                                <source srcset="./img/portfolio/poster/poster-450.webp 1x, ./img/portfolio/poster/poster-450-x2.webp 2x"
+                                    media="(max-width: 767px)" type="image/webp">
+                                <source srcset="./img/portfolio/poster/poster-450.jpg 1x, ./img/portfolio/poster/poster-450-x2.jpg 2x"
+                                    media="(max-width: 767px)">
+                            
+                                <source srcset="./img/portfolio/poster/poster-354.webp 1x, ./img/portfolio/poster/poster-354-x2.webp 2x"
+                                    media="(max-width: 1199px)" type="image/webp">
+                                <source srcset="./img/portfolio/poster/poster-354.jpg 1x, ./img/portfolio/poster/poster-354-x2.jpg 2x"
+                                    media="(max-width: 1199px)">
+                            
+                                <source srcset="./img/portfolio/poster/poster-370.webp 1x, ./img/portfolio/poster/poster-370-x2.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./img/portfolio/poster/poster-370.jpg 1x, ./img/portfolio/poster/poster-370-x2.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <img class="project__photo" src="./img/portfolio/poster/poster-370.jpg" alt="Технокряк" width="370">
+                            </picture>
                             <div class="project__overlay">Технокряк это современная площадка распространения коронавируса. Компании
                                 используют
                                 эту платформу для цифрового
@@ -81,7 +126,24 @@
                 <li class="gallery__project project">
                     <a class="project__link" href="">
                         <div class="project__position">
-                            <img class="project__photo" src="./img/portfolio/seafood.jpg" alt="Ресторан Seafood" width="370">
+                            <picture>
+                                <source srcset="./img/portfolio/seafood/seafood-450.webp 1x, ./img/portfolio/seafood/seafood-450-x2.webp 2x"
+                                    media="(max-width: 767px)" type="image/webp">
+                                <source srcset="./img/portfolio/seafood/seafood-450.jpg 1x, ./img/portfolio/seafood/seafood-450-x2.jpg 2x"
+                                    media="(max-width: 767px)">
+                            
+                                <source srcset="./img/portfolio/seafood/seafood-354.webp 1x, ./img/portfolio/seafood/seafood-354-x2.webp 2x"
+                                    media="(max-width: 1199px)" type="image/webp">
+                                <source srcset="./img/portfolio/seafood/seafood-354.jpg 1x, ./img/portfolio/seafood/seafood-354-x2.jpg 2x"
+                                    media="(max-width: 1199px)">
+                            
+                                <source srcset="./img/portfolio/seafood/seafood-370.webp 1x, ./img/portfolio/seafood/seafood-370-x2.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./img/portfolio/seafood/seafood-370.jpg 1x, ./img/portfolio/seafood/seafood-370-x2.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <img class="project__photo" src="./img/portfolio/seafood/seafood-370.jpg" alt="Технокряк" width="370">
+                            </picture>
                             <div class="project__overlay">Технокряк это современная площадка распространения коронавируса. Компании
                                 используют
                                 эту платформу для цифрового
@@ -211,7 +273,7 @@
             </div>
             <div class="page-footer__social">
                 <b class="page-footer__subtitle">присоединяйтесь</b>
-                <ul class=" social-list list">
+                <ul class="page-footer_social-list social-list list">
                     <li class="page-footer__social-link"><a class="social-list__link social-list__link--background" href=""
                             target="_blank" rel="noreferrer noopener" aria-label="instagram">
                             <svg width="20" height="20">
@@ -248,6 +310,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

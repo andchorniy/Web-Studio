@@ -8,26 +8,24 @@
   opacity: 1;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
+  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  & .modal {
-    transform: translate(-50%, 150%) scale(0.75);
-  }
 }
 .modal {
-  position: absolute;
-  width: 530px;
-  height: 580px;
-  left: 50%;
-  top: 50%;
+  position: relative;
+
+  height: 609px;
+  transform: scale(1);
   background: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
+  margin: 0 auto;
+
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -144,8 +142,8 @@
 }
 .modal__checkbox-label {
   display: flex;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   justify-content: center;
   margin-bottom: 30px;
@@ -172,4 +170,37 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    max-width: 450px;
+  }
+  .backdrop {
+    padding: 93px 12px;
+  }
+  .backdrop.is-hidden .modal {
+    transform: translateY(150%) scale(0.75);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 208px;
+    width: 450px;
+  }
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, 150%) scale(0.75);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+    margin: 0;
+  }
 }
