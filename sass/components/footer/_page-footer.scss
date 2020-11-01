@@ -33,7 +33,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .page-footer__input {
+  .page-footer__input-email {
     width: 100%;
   }
 }
@@ -74,7 +74,7 @@
   .page-footer__subscribe {
     width: 570px;
   }
-  .page-footer__input {
+  .page-footer__input-email {
     width: 358px;
   }
 }
@@ -103,7 +103,7 @@
   margin-right: 10px;
 }
 
-.page-footer__input {
+.page-footer__input-email {
   padding: 15px 0 15px 16px;
   background-color: #2f303a;
   color: $primary-white-color;
