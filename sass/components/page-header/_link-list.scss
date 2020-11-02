@@ -4,8 +4,9 @@
 
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
+
   letter-spacing: 0.02em;
   text-decoration: none;
 
@@ -16,6 +17,7 @@
   }
   @media screen and (max-width: 767px) {
     padding-bottom: 8px;
+
     &:not(:last-child) {
       margin-bottom: 40px;
     }
@@ -23,6 +25,8 @@
   @media screen and (min-width: 768px) {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 @media screen and (max-width: 767px) {

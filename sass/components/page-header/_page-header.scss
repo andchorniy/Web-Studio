@@ -16,7 +16,7 @@
     position: absolute;
     display: none;
     left: 0;
-    top: 101%;
+    top: calc(100% + 1px);
     width: 100%;
     background-color: $primary-white-color;
     text-align: center;
