@@ -403,6 +403,13 @@ p {
   color: #ffffff;
 }
 
+@media screen and (max-width: 360px) {
+  .page-hero__title {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 479px) {
   .page-hero__container {
     max-width: 480px;
@@ -755,7 +762,6 @@ p {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    margin-top: 208px;
     width: 450px;
   }
   .backdrop.is-hidden .modal {

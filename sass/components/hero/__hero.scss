@@ -20,6 +20,12 @@
   text-transform: uppercase;
   color: $primary-white-color;
 }
+@media screen and (max-width: 360px) {
+  .page-hero__title {
+    width: 100%;
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 479px) {
   .page-hero__container {
     max-width: 480px;
